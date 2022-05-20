@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+ 
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+  integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+  crossorigin=""/>
+
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+  integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+  crossorigin=""></script>
+
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+</head>
+<body>
+  <div class="map__container">
+
+    <section class="map__container__search">
+      <h1 class=" __search__title ">IP Address Tracker</h1>
+
+      <div class="__search__input__container">
+        <input type="text" placeholder="Search for any IP address or domain" id="search">
+        <button>
+          <img src="images/icon-arrow.svg"  alt="search icon">
+        </button>
+      </div>
+    </section>
+
+    <section class="map__container__info">
+
+      <div class="__info__ipAdress">
+        <h3 class=" small__text" >
+          IP Address
+        </h3>
+        <p class="big-text __info__ipAdress">
+          192.212.174.101
+        </p>
+      </div>
+
+      <div class="__info__location">
+        <h3 class=" small__text" >
+          Location
+        </h3>
+        <p class="big-text __info__location">
+          Brooklyn, NY 10001
+        </p>
+      </div>
+
+      <div class="__info__timezone">
+        <h3 class="small__text" >
+          TIMEZONE
+        </h3>
+        <p class="big-text __info__timezone">
+          UTC -05:00
+        </p>
+      </div>
+
+      <div class="__info__ips">
+        <h3 class="small__text" >
+          ISP
+        </h3>
+        <p class="big-text __info__ips">
+          SpaceX  Starlink
+        </p>
+      </div>
+
+    </section>
+
+    <section class="map__container__Map" id="map">
+    </section>
+
+  </div>
+
+
+
+</body>
+</html>
+
+
+
+
+<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+<!-- <style>
+  .attribution { font-size: 11px; text-align: center; }
+  .attribution a { color: hsl(228, 45%, 44%); }
+</style> -->
+<!-- IP Address Tracker
+  
+  Search for any IP address or domain
+  
+  IP Address
+  Location
+  Timezone -->
+  <!-- UTC add offset value dynamically using the API 
+    ISP -->
+    
+    <!-- <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div> -->

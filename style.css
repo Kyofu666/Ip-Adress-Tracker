@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+}
+*,
+*::before,
+*::after{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --VeryDarkGray: hsl(0, 0%, 17%);
+    --DarkGray: hsl(0, 0%, 59%);
+}
+
+.big-text{
+    font-size: 25px;
+    font-weight: 500;
+}
+.small__text{
+    color: var(--DarkGray);
+    font-size: 15px;
+}
+
+.map__container{
+   display: flex;
+   flex-direction: column; 
+   position: relative;
+}
+.map__container__search{
+    width: 100%;
+    height: 33vh;
+    background-image: url(images/pattern-bg.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0px;
+}
+.__search__title{
+    color: white;
+    font-size: 30px; 
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.__search__input__container{
+    position: relative;
+    display: flex;
+    gap: 0;
+    margin-bottom: 15px;
+    width: 550px;
+    height: 50px;
+}
+.__search__input__container input{
+    font-size: 18px;
+    width: 100%;
+    padding:15px 25px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+.__search__input__container button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    border: none;
+    background-color: var(--VeryDarkGray);
+    border-radius: 0px 10px 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+.__search__input__container button img{
+    width: 10px;
+}
+
+
+.map__container__info{
+    z-index: 5;
+    align-self: center;
+    position: absolute;
+    top: 26vh;
+    min-width: 78vw;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+}
+.map__container__info div{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 35px;
+    border-left: 1px solid var(--DarkGray);
+    
+}
+.map__container__info div:first-child{
+    border: none;
+}
+.map__container__info div:last-child{
+    margin-right: 80px;
+}
+
+.map__container__Map{
+   z-index: 2;
+   width: 100%;
+   height: 67vh;
+}
+
+/* Tablette */
+@media screen and (max-width:1200px) {
+    .big-text{
+        font-size: 20px;
+    }
+    .small__text{
+        font-size: 10px;
+    }
+    .__search__input__container{
+        width: 500px;
+        height: 45px;
+    }
+    .map__container__info{
+        top: 22vh;
+        padding: 10px 10px;
+        height: 20vh;
+        align-items: center;
+        min-width: 60%;
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .map__container__info div{
+        padding: 0px 15px ;
+        border: none;
+    }
+    .map__container__info div:first-child{
+        padding-top: 0px;
+        
+    }
+    .map__container__info div h3,p{
+        text-align: center;
+    }
+    .map__container__info div:last-child{
+        align-items: center;
+        padding-bottom: 0px;
+        margin: 0;
+    }    
+    .map__container__info div:last-child p{
+        max-width: 180px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width:560px){
+    
+    .big-text{
+        font-size: 15px;
+    }
+    .small__text{
+        font-size: 10px;
+    }
+    .__search__title{
+        font-size: 25px;
+    }
+    .__search__input__container{
+        width: 250px;
+        height: 40px;
+    }
+    .map__container__info{
+        top: 18vh;
+        height: 30vh;
+        padding: 10px 25px;
+        min-width: 50%;
+        max-width: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0px;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .__search__input__container input::placeholder{
+        font-size: 15px;
+    }
+    .map__container__info div{
+        margin-bottom: 20px;
+        gap: 5px;
+        padding: 0px 15px ;
+        border: none;
+    }
+    .map__container__info div:first-child{
+        padding-top: 0px;
+        
+    }
+    .map__container__info div h3,p{
+        text-align: center;
+    }
+    .map__container__info div:last-child {
+        padding-bottom: 0px;
+        margin: 0;
+    }    
+
+}
