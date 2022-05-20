@@ -33,7 +33,7 @@ body{
 .map__container__search{
     width: 100%;
     height: 33vh;
-    background-image: url(images/pattern-bg.png);
+    background-image: url( https://kyofu666.github.io/Ip-Adress-Tracker/images/pattern-bg.png);
     display: flex;
     flex-direction: column;
     align-items: center;
